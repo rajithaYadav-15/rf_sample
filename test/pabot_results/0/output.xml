@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-04-18T15:07:56.807991" rpa="false" schemaversion="5">
+<suite id="s1" name="Parameterization" source="/home/costrategix/PycharmProjects/Sample/test/parameterization.robot">
+<test id="s1-t1" name="Invalid username" line="8">
+<kw name="Validate UnSuccesful Login">
+<kw name="open the browser with the Mortgage payment url" owner="resource">
+<kw name="Get Driver Path With Browser" owner="webManager">
+<msg time="2024-04-18T15:07:56.903201" level="INFO">====== WebDriver manager ======</msg>
+<msg time="2024-04-18T15:07:56.949675" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-04-18T15:07:57.049913" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-04-18T15:07:57.150111" level="INFO">Driver [/home/costrategix/.wdm/drivers/chromedriver/linux64/123.0.6312.122/chromedriver-linux64/chromedriver] found in cache</msg>
+<msg time="2024-04-18T15:07:57.150276" level="INFO">/home/costrategix/.wdm/drivers/chromedriver/linux64/123.0.6312.122/chromedriver-linux64/chromedriver</msg>
+<msg time="2024-04-18T15:07:57.150458" level="INFO">${driver_path} = /home/costrategix/.wdm/drivers/chromedriver/linux64/123.0.6312.122/chromedriver-linux64/chromedriver</msg>
+<var>${driver_path}</var>
+<arg>chrome</arg>
+<status status="PASS" start="2024-04-18T15:07:56.903009" elapsed="0.247486"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-18T15:07:57.151801" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-18T15:07:57.151352" elapsed="1.290619"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-18T15:07:58.442946" elapsed="0.104957"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-18T15:08:00.548928" level="INFO">Slept 2 seconds.</msg>
+<arg>2 sec</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-18T15:07:58.548242" elapsed="2.000927"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-04-18T15:08:00.550039" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-04-18T15:08:00.549589" elapsed="0.034297"/>
+</kw>
+<status status="PASS" start="2024-04-18T15:07:56.902783" elapsed="3.681342"/>
+</kw>
+<kw name="Fill the login Form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-18T15:08:00.585546" level="INFO">Typing text 'sasdasd' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-18T15:08:00.585034" elapsed="0.139192"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-04-18T15:08:00.726380" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-04-18T15:08:00.762484" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-18T15:08:00.725323" elapsed="0.077394"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-18T15:08:00.803442" level="INFO">Clicking button 'signInBtn'.</msg>
+<arg>signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-18T15:08:00.803091" elapsed="0.064428"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.alert-danger</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-18T15:08:00.867758" elapsed="2.076697"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-04-18T15:08:00.584447" elapsed="2.360364"/>
+</kw>
+<arg>sasdasd</arg>
+<arg>learning</arg>
+<status status="PASS" start="2024-04-18T15:07:56.902369" elapsed="6.042671"/>
+</kw>
+<kw name="Close Browser session" owner="resource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-18T15:08:02.946358" elapsed="0.058007"/>
+</kw>
+<status status="PASS" start="2024-04-18T15:08:02.945744" elapsed="0.058822"/>
+</kw>
+<status status="PASS" start="2024-04-18T15:07:56.901944" elapsed="6.102730"/>
+</test>
+<doc>To validate the parameterize</doc>
+<status status="PASS" start="2024-04-18T15:07:56.812378" elapsed="6.193075"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Parameterization">Parameterization</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

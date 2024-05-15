@@ -1,0 +1,7 @@
+datasources:a3dd74966a69f01468c20997dbb0e5b62f7a2697
+commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
+suitesfrom:no-suites-from-option
+file:2dc2ad3d0c8ff67778382fbed8cde43eb22db63e
+--test Parameterization.Invalid username
+--test Parameterization.Invalid password
+--test Parameterization.Special characters
